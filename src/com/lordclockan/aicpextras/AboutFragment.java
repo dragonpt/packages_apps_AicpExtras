@@ -256,8 +256,9 @@ public class AboutFragment extends Fragment {
             try {
                 findPreference(preference).setSummary(value);
             } catch (RuntimeException e) {
-                findPreference(preference).setSummary(
-                    getResources().getString(R.string.device_info_default));
+            }
+                /*findPreference(preference).setSummary(
+                    getResources().getString(R.string.device_info_default));*/
             }
         public void getDeviceName() {
             mDeviceName = SystemProperties.get("ro.product.device");
