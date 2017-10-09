@@ -47,7 +47,7 @@ import com.lordclockan.R;
 
 public class Utils {
 
-    private static Properties sDictionary;
+    /*private static Properties sDictionary;*/
     public static final String PROPERTY_DEVICE = "ro.aicp.device";
     public static final String PROPERTY_DEVICE_EXT = "ro.product.device";
 
@@ -55,7 +55,7 @@ public class Utils {
         String device = getProp(PROPERTY_DEVICE);
         if (device == null || device.isEmpty()) {
             device = getProp(PROPERTY_DEVICE_EXT);
-            device = translateDeviceName(context, device);
+            /*device = translateDeviceName(context, device);*/
         }
         return device == null ? "" : device.toLowerCase();
    }
@@ -77,7 +77,7 @@ public class Utils {
     return null;
     }
 
-    public static String translateDeviceName(Context context, String device) {
+    /*public static String translateDeviceName(Context context, String device) {
         Properties dictionary = getDictionary(context);
         String translate = dictionary.getProperty(device);
         if (translate == null) {
@@ -103,7 +103,7 @@ public class Utils {
             }
         }
         return sDictionary;
-    }
+    }*/
 
     /**
      * Returns whether the device is voice-capable (meaning, it is also a phone).
